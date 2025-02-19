@@ -1,0 +1,345 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Bella Cucina</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-white bg-white container pt-4">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">La Bella Cucina</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#popular-dishes">Popular Dishes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#our-story">Our Story</a></li>
+                </ul>
+                <a class="btn btn-primary ms-3" href="#book-table">Book a Table</a>
+            </div>
+        </div>
+    </nav>
+
+<!-- Hero Section -->
+<section id="home" class="vh-100 d-flex align-items-center bg-white text-dark">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Hero Text -->
+            <div class="col-lg-6 mb-4 mb-lg-0 text-center text-lg-start">
+                <h1 class="display-4 fw-bold">Welcome to Authentic Italian Cuisine Restaurant</h1>
+                <p class="lead">Discover exquisite flavors, exceptional dining, and unforgettable moments.</p>
+                <a href="#popular-dishes" class="btn btn-primary btn-lg mt-3">Explore Dishes</a>
+            </div>
+            <!-- Carousel -->
+            <div class="col-lg-6">
+                <div id="heroCarousel" class="carousel slide " data-bs-ride="carousel">
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active">
+                            <img src="./images/chef.jpeg" class="d-block w-100" alt="Dish 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/pastachef.jpg" class="d-block w-100" alt="Dish 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/GreatPastryChef.jpg" class="d-block w-100" alt="Dish 3">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Popular Dishes Section -->
+<section id="popular-dishes" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Popular Dishes</h2>
+        
+        <!-- Pasta Section -->
+        <div class="mb-5">
+            <h3 class="mb-4">Pasta</h3>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./pasta images/Agnolini pasta.jpg" class="card-img-top" alt="Pasta Dish 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Agnolini pasta</h5>
+                            <p class="card-text">Rich and creamy Alfredo sauce with fettuccine pasta.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./pasta images/Casarecce Pasta With Broccoli and Tuna.jpg" class="card-img-top " alt="Pasta Dish 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Casarecce pasta With Broccoli and Tuna</h5>
+                            <p class="card-text">A flavorful dish combining tender pasta, fresh broccoli, and savory tuna, infused with garlic and olive oil. Topped with Parmesan and a squeeze of lemon.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./pasta images/linguine puttanesca.jpg" class="card-img-top" alt="Pasta Dish 3">
+                        <div class="card-body">
+                            <h5 class="card-title">linguine puttanesca</h5>
+                            <p class="card-text">Linguine Puttanesca is a bold and savory pasta dish featuring olives, capers, anchovies, and tomatoes, creating a tangy, umami-packed sauce.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./pasta images/Pasta alla Norma.jpg" class="card-img-top" alt="Pasta Dish 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Pasta alla Norma</h5>
+                            <p class="card-text">Pasta alla Norma is a classic Sicilian recipe with tender eggplant, rich tomato sauce, and a sprinkle of ricotta salata for a hearty and flavorful vegetarian dish.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./pasta images/Rigatoni all'Amatriciana.webp" class="card-img-top" alt="Pasta Dish 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Rigatoni all'Amatriciana</h5>
+                            <p class="card-text">Fresh basil pesto tossed with penne pasta and cherry tomatoes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pizza Section -->
+        <div class="mb-5">
+            <h3 class="mb-4">Pizza</h3>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./pizza images/Margheritapizza.avif" class="card-img-top" alt="Pizza Dish 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Margherita</h5>
+                            <p class="card-text"> It is a timeless favorite, combining a simple tomato base with mozzarella and fresh basil for a classic taste.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./pizza images/Pizza ai frutti di mare.webp" class="card-img-top" alt="Pizza Dish 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Pizza ai frutti di mare</h5>
+                            <p class="card-text">Pizza ai Frutti di Mare is a seafood lover's delight, topped with a mix of fresh mussels, shrimp, and clams on a tomato base.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./pizza images/Pizza caprese.jpg" class="card-img-top" alt="Pizza Dish 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Pizza caprese</h5>
+                            <p class="card-text">Pizza Caprese is a refreshing choice, featuring tomatoes, mozzarella, fresh basil, and a drizzle of olive oil.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./pizza images/Pizza capricciosa.webp" class="card-img-top" alt="Pizza Dish 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Pizza capricciosa</h5>
+                            <p class="card-text">A melody of classic Italian pizza loaded with ham, mushrooms, artichokes, olives, and mozzarella.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./pizza images/Pizza quattro stagioni.jpg" class="card-img-top" alt="Pizza Dish 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Pizza quattro stagioni</h5>
+                            <p class="card-text">Pizza that represents the four seasons with sections of artichokes, mushrooms, ham, and olives on a single pizza.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./pizza images/Pizzetta.jpg" class="card-img-top" alt="Pizza Dish 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Pizzetta</h5>
+                            <p class="card-text">It is a mini pizza, perfect for one, with a crispy crust, tomato sauce, cheese, and customizable toppings.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Desserts Section -->
+        <div>
+            <h3 class="mb-4">Desserts</h3>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./desert images/Blancmange vanila.jpg" class="card-img-top" alt="Dessert Dish 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Blancmange vanila</h5>
+                            <p class="card-text">Blancmange Vanilla is a silky, creamy dessert with a delicate vanilla flavor, often served chilled.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./desert images/Bombolone Pistacchio.jpg" class="card-img-top" alt="Dessert Dish 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Bombolone Pistacchio</h5>
+                            <p class="card-text">Bombolone Pistacchio is a soft, sugar-dusted Italian doughnut filled with rich pistachio cream.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./desert images/Delizia al limone.jpg" class="card-img-top" alt="Dessert Dish 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Delizia al limone</h5>
+                            <p class="card-text">Delizia al Limone is a zesty lemon-infused sponge cake filled with citrus cream, a specialty of Italy's Amalfi Coast.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./desert images/Maritozzo alla panna.jpeg" class="card-img-top" alt="Dessert Dish 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Maritozzo alla panna</h5>
+                            <p class="card-text">Maritozzo alla Panna is a sweet brioche bun generously filled with fluffy whipped cream.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./desert images/Panna cotta.jpeg" class="card-img-top" alt="Dessert Dish 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Panna cotta</h5>
+                            <p class="card-text">Panna Cotta is a smooth, creamy custard-like dessert, often topped with fruit or caramel.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./desert images/Sicilian Ricotta Cannoli.jpg" class="card-img-top" alt="Dessert Dish 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Sicilian Ricotta Cannoli</h5>
+                            <p class="card-text">Sicilian Ricotta Cannoli are crispy pastry shells filled with sweet, creamy ricotta, often garnished with chocolate or candied fruit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Book a table Section -->
+    <section id="book-table" class="py-5 bg-light">
+        <div class="container">
+            <h2>Book a Table</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <div class="mb-3">
+                    <label for="date" class="form-label">Date</label>
+                    <input type="date" class="form-control" id="date">
+                </div>
+                <button type="submit" class="btn btn-primary">Book Now</button>
+            </form>
+        </div>
+    </section>
+    <!-- About Us Section -->
+<section id="about" class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2>About Us</h2>
+                <p class="lead">
+                    Welcome to La Bella Cucina, where we bring the heart of Italy to your table. Our restaurant is dedicated
+                     to serving authentic Italian dishes crafted with love, tradition, and the freshest ingredients. From our 
+                     homemade pasta and wood-fired pizzas to our delightful desserts, every bite is a celebration of Italian culture and flavor. 
+                     buon appetito!
+                </p>
+                <!--  Our Story -->
+                <section id="our-story" class="py-5">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-4 mb-lg-0">
+                                <h2>Our Story</h2>
+                                <p class="lead">
+                <p>
+                    La Bella Cucina was born from a deep passion for the culinary traditions of Italy, passed down through generations 
+                    of our family. Our journey began in a small Tuscan village, where the aroma of freshly baked bread and simmering sauces 
+                    filled the air. Inspired by these memories, we set out to create a place where guests could experience the warmth and
+                     authenticity of Italian dining. At La Bella Cucina, every dish tells a story — from our handmade pasta and wood-fired 
+                      pizzas to our rich, velvety desserts. We pride ourselves on using only the freshest ingredients, sourced locally and 
+                      from Italy, to ensure that every bite is a celebration of flavor and tradition. Join us to savor the true taste of Italy, 
+                      where every meal feels like coming home.
+                </p>
+                <a href="#contact" class="btn btn-primary">Contact Us</a>
+            </div>
+            <div class="col-lg-6">
+                <img src="images/interior.jpg" alt="About Us" class="img-fluid rounded ">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345097115!2d144.96305781531587!3d-37.81627997975159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5773de8ed2d7a0!2sFederation%20Square%2C%20Melbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2s!4v1678000000000!5m2!1sen!2s" 
+                    width="100%" 
+                    height="350" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    class="rounded shadow">
+                </iframe>
+            </div>
+
+            <div class="col-lg-6">
+                <h2>Contact Us</h2>
+                <p class="lead">We'd love to hear from you! Get in touch with us through the following:</p>
+                <ul class="list-unstyled">
+                    <li><strong>Address:</strong> 123 Main Street, Your City, Your Country</li>
+                    <li><strong>Email:</strong> contact@yourrestaurant.com</li>
+                    <li><strong>Phone:</strong> +123 456 7890</li>
+                </ul>
+                <p>Feel free to visit us during our working hours or send us an email, and we’ll get back to you promptly!</p>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Footer -->
+    <footer class="bg-dark text-center text-white py-3">
+        <p>&copy;  2025 La Bella Cucina. All rights reserved</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

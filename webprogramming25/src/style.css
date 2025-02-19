@@ -1,0 +1,102 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #d6e4f1;
+    color: #333;
+}
+
+/* Navbar Styling */
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+    color: #d63384 !important;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    margin-right: 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #d63384;
+}
+
+.btn-primary {
+    background-color: #d63384;
+    border-color: #d63384;
+}
+
+.btn-primary:hover {
+    background-color: #b02a6f;
+    border-color: #b02a6f;
+}
+
+/* Hero Section */
+#home {
+    background: url('./images/backgr.jpg') center/cover no-repeat;
+    text-align: center;
+    padding: 100px 0;
+}
+
+#home h1 {
+    color: #d63384;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#home p {
+    font-size: 1.2rem;
+    color: #ed0acb;
+}
+
+/* Popular Dishes Section */
+#popular-dishes h2 {
+    color: #f20e9e;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(237, 4, 175, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-title {
+    color: #d63384;
+    font-weight: bold;
+}
+
+/* About Section */
+#about h2, #our-story h2 {
+    font-size: 2.5rem;
+    color: #f41082;
+}
+
+#about p, #our-story p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #ecf6eaf7;
+    color: #fbeded;
+    font-size: 1rem;
+}
+
