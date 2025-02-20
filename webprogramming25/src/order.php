@@ -1,7 +1,7 @@
 <?php
 require 'includes/db.php';
 
-// Check if dish details are received
+// Checking dish details are received
 if (!isset($_GET['name']) || !isset($_GET['price']) || !isset($_GET['image'])) {
     die("Invalid request.");
 }
@@ -10,20 +10,21 @@ $dish_name = $_GET['name'];
 $dish_price = $_GET['price'];
 $dish_image = $_GET['image'];
 
-// Process Order
+// order form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $customer_name = trim($_POST['customer_name']);
     $customer_email = trim($_POST['customer_email']);
+    $customer_address = trim($_POST['customer_address']); // Address input
     $quantity = intval($_POST['quantity']);
     $total_price = $dish_price * $quantity;
 
-    // Validate input (Server-side)
-    if (empty($customer_name) || empty($customer_email) || $quantity <= 0) {
+    // Valid input check
+    if (empty($customer_name) || empty($customer_email) || empty($customer_address) || $quantity <= 0) {
         echo "<script>alert('Invalid input! Please enter valid details.'); window.history.back();</script>";
         exit();
     }
 
-    // Insert Customer (If new, else find existing)
+    // customer check
     $stmt = $conn->prepare("SELECT id FROM customers WHERE email = ?");
     $stmt->execute([$customer_email]);
     $customer = $stmt->fetch();
@@ -31,17 +32,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($customer) {
         $customer_id = $customer['id'];
     } else {
-        $stmt = $conn->prepare("INSERT INTO customers (name, email, phone, address) VALUES (?, ?, '', '')");
-        $stmt->execute([$customer_name, $customer_email]);
+        $stmt = $conn->prepare("INSERT INTO customers (name, email, address) VALUES (?, ?, ?)");
+        $stmt->execute([$customer_name, $customer_email, $customer_address]);
         $customer_id = $conn->lastInsertId();
     }
 
-    // Insert Order
+    // order
     $stmt = $conn->prepare("INSERT INTO orders (customer_id, total_price, status) VALUES (?, ?, 'Pending')");
     $stmt->execute([$customer_id, $total_price]);
     $order_id = $conn->lastInsertId();
 
-    // Insert Order Item
+    // order items
     $stmt = $conn->prepare("INSERT INTO order_items (order_id, menu_item_id, quantity, subtotal) 
                             VALUES (?, (SELECT id FROM menu_items WHERE name = ?), ?, ?)");
     $stmt->execute([$order_id, $dish_name, $quantity, $total_price]);
@@ -85,6 +86,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
 
             <div class="mb-3">
+                <label class="form-label">Address:</label>
+                <input type="text" class="form-control" name="customer_address" id="customerAddress" required>
+            </div>
+
+            <div class="mb-3">
                 <label class="form-label">Quantity:</label>
                 <input type="number" class="form-control" name="quantity" id="quantity" required min="1">
             </div>
@@ -93,46 +99,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </form>
     </div>
 
-    <!-- Include JavaScript for Client-Side Validation -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const orderForm = document.getElementById("orderForm");
+   
 
-            orderForm.addEventListener("submit", function (event) {
-                let isValid = true;
-                let errorMessage = "";
-
-                const name = document.getElementById("customerName").value.trim();
-                const email = document.getElementById("customerEmail").value.trim();
-                const quantity = document.getElementById("quantity").value.trim();
-
-                // Name validation
-                if (name === "") {
-                    isValid = false;
-                    errorMessage += "Name is required.\n";
-                }
-
-                // Email validation
-                const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-                if (!emailPattern.test(email)) {
-                    isValid = false;
-                    errorMessage += "Enter a valid email address.\n";
-                }
-
-                // Quantity validation
-                if (quantity === "" || isNaN(quantity) || parseInt(quantity) <= 0) {
-                    isValid = false;
-                    errorMessage += "Quantity must be a positive number.\n";
-                }
-
-                if (!isValid) {
-                    alert(errorMessage);
-                    event.preventDefault();
-                }
-            });
-        });
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
 </body>
 </html>
