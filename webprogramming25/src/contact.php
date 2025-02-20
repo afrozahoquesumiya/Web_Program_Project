@@ -24,10 +24,10 @@
                     <li><strong>Email:</strong> labella1886@gmail.com</li>
                     <li><strong>Phone:</strong> +123 456 7890</li>
                 </ul>
-                <p>Feel free to visit us during our working hours or send us an email, and we’ll get back to you promptly!</p>
+                <p>Feel free to visit us during our working hours or send us an email, and we'll get back to you promptly!</p>
             </div>
         </div>
     </div>
 </section>
 
-<?php include 'footer.php'; ?>
+<?php include 'footer.php';?>

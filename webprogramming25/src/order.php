@@ -1,6 +1,7 @@
 <?php
 require 'includes/db.php';
 
+
 // Checking dish details are received
 if (!isset($_GET['name']) || !isset($_GET['price']) || !isset($_GET['image'])) {
     die("Invalid request.");
