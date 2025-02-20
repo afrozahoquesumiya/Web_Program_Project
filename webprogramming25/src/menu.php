@@ -1,5 +1,42 @@
-<?php include 'header.php'; ?>
+<?php 
+include("includes/db.php");
+include 'header.php';
 
+$sql = "INSERT INTO menu_items (id,name, category,description, price,image_url) 
+VALUES(11, 'Pizzetta', 'Pizza', 'It is a mini pizza, perfect for one, with a crispy crust, tomato sauce, cheese, and customizable toppings.', 8.99, './pizza images/Pizzetta.jpg'),
+(12, 'Blancmange vanila', 'Desserts', 'Blancmange Vanilla is a silky, creamy dessert with a delicate vanilla flavor, often served chilled.', 5.99, './desert images/Blancmange vanila.jpg'),
+(13, 'Bombolone Pistacchio', 'Desserts', 'Bombolone Pistacchio is a soft, sugar-dusted Italian doughnut filled with rich pistachio cream.', 6.99, './desert images/Bombolone Pistacchio.jpg'),
+(14, 'Delizia al limone', 'Desserts', 'Delizia al Limone is a zesty lemon-infused sponge cake filled with citrus cream, a specialty of Italy is Amalfi Coast.', 7.99, './desert images/Delizia al limone.jpg'),
+(15, 'Maritozzo alla panna', 'Desserts', 'Maritozzo alla Panna is a sweet brioche bun generously filled with fluffy whipped cream.', 8.99, './desert images/Maritozzo alla panna.jpeg'),
+(16, 'Panna cotta', 'Desserts', 'Panna Cotta is a smooth, creamy custard-like dessert, often topped with fruit or caramel.', 9.99, './desert images/Panna cotta.jpeg'),
+(17, 'Sicilian Ricotta Cannoli', 'Desserts', 'Sicilian Ricotta Cannoli are crispy pastry shells filled with sweet, creamy ricotta, often garnished with chocolate or candied fruit.', 10.99, './desert images/Sicilian Ricotta Cannoli.jpg')";
+
+$result = mysqli_query($conn, $sql);
+if ($result) {
+    echo "Table created successfully";
+} else {
+    echo "Error creating table: " . mysqli_error($conn);
+}
+
+// if ($result->num_rows > 0) {
+//     // output data of each row
+//     while($row = $result->fetch_assoc()) {
+//       echo "id: " . $row["id"]. " - Name: " . $row["name"]. "category " . $row["category"]. "<br>";
+//     }
+//   } else {
+//     echo "0 results";
+//   }
+
+ ?>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
 <section class="container py-5" id="menu">
     <h2 class="text-center mb-4">Our Menu</h2>
     <!-- Pasta Section -->
@@ -13,7 +50,7 @@
                             <h5 class="card-title">Agnolini pasta</h5>
                             <p class="card-text">Rich and creamy Alfredo sauce with fettuccine pasta.</p>
                             <p class="card-text">Price: $12.99</p>
-                            <button type="button" class="btn btn-primary">Order Now</button>
+                            <button type="button" class="btn btn-primary" name="ordernowbutton">Order Now</button>
                         </div>
                     </div>
                 </div>
@@ -211,5 +248,8 @@
         </div>
     </div>
 </section>
+
+</body>
+</html>
 
 <?php include 'footer.php'; ?>
