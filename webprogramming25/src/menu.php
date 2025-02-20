@@ -50,7 +50,13 @@ if ($result) {
                             <h5 class="card-title">Agnolini pasta</h5>
                             <p class="card-text">Rich and creamy Alfredo sauce with fettuccine pasta.</p>
                             <p class="card-text">Price: $12.99</p>
-                            <button type="button" class="btn btn-primary" name="ordernowbutton">Order Now</button>
+                            <!-- Order Form -->
+                        <form method="GET" action="order.php">
+                            <input type="hidden" name="name" value="Agnolini pasta">
+                            <input type="hidden" name="price" value="12.99">
+                            <input type="hidden" name="image" value="./pasta images/Agnolini pasta.jpg">
+                            <button type="submit" class="btn btn-primary">Order Now</button>
+                        </form>
                         </div>
                     </div>
                 </div>
